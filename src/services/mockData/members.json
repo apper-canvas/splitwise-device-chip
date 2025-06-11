@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1",
+    "name": "Alice Johnson",
+    "email": "alice.johnson@email.com",
+    "phone": "(555) 123-4567",
+    "avatar": null,
+    "createdAt": "2024-01-15T10:30:00Z"
+  },
+  {
+    "id": "2",
+    "name": "Bob Wilson",
+    "email": "bob.wilson@email.com",
+    "phone": "(555) 234-5678",
+    "avatar": null,
+    "createdAt": "2024-01-20T14:45:00Z"
+  },
+  {
+    "id": "3",
+    "name": "Carol Davis",
+    "email": "carol.davis@email.com",
+    "phone": "(555) 345-6789",
+    "avatar": null,
+    "createdAt": "2024-01-25T09:15:00Z"
+  },
+  {
+    "id": "4",
+    "name": "David Brown",
+    "email": "david.brown@email.com",
+    "phone": "(555) 456-7890",
+    "avatar": null,
+    "createdAt": "2024-02-01T16:20:00Z"
+  },
+  {
+    "id": "5",
+    "name": "Eva Garcia",
+    "email": "eva.garcia@email.com",
+    "phone": "(555) 567-8901",
+    "avatar": null,
+    "createdAt": "2024-02-05T11:30:00Z"
+  }
+]
