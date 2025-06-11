@@ -1,9 +1,9 @@
-import Home from '../pages/Home';
-import Groups from '../pages/Groups';
-import Expenses from '../pages/Expenses';
-import Balances from '../pages/Balances';
-import Settings from '../pages/Settings';
-import NotFound from '../pages/NotFound';
+import HomePage from '@/components/pages/HomePage';
+import GroupsPage from '@/components/pages/GroupsPage';
+import ExpensesPage from '@/components/pages/ExpensesPage';
+import BalancesPage from '@/components/pages/BalancesPage';
+import SettingsPage from '@/components/pages/SettingsPage';
+import NotFoundPage from '@/components/pages/NotFoundPage';
 
 export const routes = {
   home: {
@@ -11,42 +11,42 @@ export const routes = {
     label: 'Home',
     path: '/',
     icon: 'Home',
-    component: Home
+component: HomePage
   },
   groups: {
     id: 'groups',
     label: 'Groups',
     path: '/groups',
     icon: 'Users',
-    component: Groups
+component: GroupsPage
   },
   expenses: {
     id: 'expenses',
     label: 'Expenses',
     path: '/expenses',
     icon: 'Receipt',
-    component: Expenses
+component: ExpensesPage
   },
   balances: {
     id: 'balances',
     label: 'Balances',
     path: '/balances',
     icon: 'Scale',
-    component: Balances
+component: BalancesPage
   },
   settings: {
     id: 'settings',
     label: 'Settings',
     path: '/settings',
     icon: 'Settings',
-    component: Settings
+component: SettingsPage
   },
   notFound: {
     id: 'notFound',
     label: 'Not Found',
     path: '*',
     icon: 'AlertCircle',
-    component: NotFound
+component: NotFoundPage
   }
 };
 
