@@ -1,0 +1,243 @@
+[
+  {
+    "id": "e1",
+    "groupId": "1",
+    "amount": 125.50,
+    "currency": "EUR",
+    "description": "Dinner at Le Bistro",
+    "paidBy": "m1",
+    "participants": [
+      {
+        "memberId": "m1",
+        "share": 31.375,
+        "shareType": "equal"
+      },
+      {
+        "memberId": "m2",
+        "share": 31.375,
+        "shareType": "equal"
+      },
+      {
+        "memberId": "m3",
+        "share": 31.375,
+        "shareType": "equal"
+      },
+      {
+        "memberId": "m4",
+        "share": 31.375,
+        "shareType": "equal"
+      }
+    ],
+    "date": "2024-01-16T19:30:00Z",
+    "category": "Food"
+  },
+  {
+    "id": "e2",
+    "groupId": "1",
+    "amount": 85.00,
+    "currency": "EUR",
+    "description": "Taxi to Eiffel Tower",
+    "paidBy": "m2",
+    "participants": [
+      {
+        "memberId": "m1",
+        "share": 21.25,
+        "shareType": "equal"
+      },
+      {
+        "memberId": "m2",
+        "share": 21.25,
+        "shareType": "equal"
+      },
+      {
+        "memberId": "m3",
+        "share": 21.25,
+        "shareType": "equal"
+      },
+      {
+        "memberId": "m4",
+        "share": 21.25,
+        "shareType": "equal"
+      }
+    ],
+    "date": "2024-01-16T14:15:00Z",
+    "category": "Transportation"
+  },
+  {
+    "id": "e3",
+    "groupId": "2",
+    "amount": 240.00,
+    "currency": "USD",
+    "description": "Monthly Utilities",
+    "paidBy": "m5",
+    "participants": [
+      {
+        "memberId": "m5",
+        "share": 80.00,
+        "shareType": "equal"
+      },
+      {
+        "memberId": "m6",
+        "share": 80.00,
+        "shareType": "equal"
+      },
+      {
+        "memberId": "m7",
+        "share": 80.00,
+        "shareType": "equal"
+      }
+    ],
+    "date": "2024-01-15T10:00:00Z",
+    "category": "Utilities"
+  },
+  {
+    "id": "e4",
+    "groupId": "2",
+    "amount": 67.50,
+    "currency": "USD",
+    "description": "Grocery Shopping",
+    "paidBy": "m6",
+    "participants": [
+      {
+        "memberId": "m5",
+        "share": 22.50,
+        "shareType": "equal"
+      },
+      {
+        "memberId": "m6",
+        "share": 22.50,
+        "shareType": "equal"
+      },
+      {
+        "memberId": "m7",
+        "share": 22.50,
+        "shareType": "equal"
+      }
+    ],
+    "date": "2024-01-14T18:20:00Z",
+    "category": "Groceries"
+  },
+  {
+    "id": "e5",
+    "groupId": "3",
+    "amount": 75.25,
+    "currency": "USD",
+    "description": "Team Lunch - Pizza Palace",
+    "paidBy": "m8",
+    "participants": [
+      {
+        "memberId": "m8",
+        "share": 15.05,
+        "shareType": "equal"
+      },
+      {
+        "memberId": "m9",
+        "share": 15.05,
+        "shareType": "equal"
+      },
+      {
+        "memberId": "m10",
+        "share": 15.05,
+        "shareType": "equal"
+      },
+      {
+        "memberId": "m11",
+        "share": 15.05,
+        "shareType": "equal"
+      },
+      {
+        "memberId": "m12",
+        "share": 15.05,
+        "shareType": "equal"
+      }
+    ],
+    "date": "2024-01-12T12:30:00Z",
+    "category": "Food"
+  },
+  {
+    "id": "e6",
+    "groupId": "4",
+    "amount": 450.00,
+    "currency": "USD",
+    "description": "Ski Lodge Accommodation",
+    "paidBy": "m13",
+    "participants": [
+      {
+        "memberId": "m13",
+        "share": 150.00,
+        "shareType": "equal"
+      },
+      {
+        "memberId": "m14",
+        "share": 150.00,
+        "shareType": "equal"
+      },
+      {
+        "memberId": "m15",
+        "share": 150.00,
+        "shareType": "equal"
+      }
+    ],
+    "date": "2024-01-10T16:00:00Z",
+    "category": "Accommodation"
+  },
+  {
+    "id": "e7",
+    "groupId": "4",
+    "amount": 180.00,
+    "currency": "USD",
+    "description": "Lift Tickets",
+    "paidBy": "m14",
+    "participants": [
+      {
+        "memberId": "m13",
+        "share": 60.00,
+        "shareType": "equal"
+      },
+      {
+        "memberId": "m14",
+        "share": 60.00,
+        "shareType": "equal"
+      },
+      {
+        "memberId": "m15",
+        "share": 60.00,
+        "shareType": "equal"
+      }
+    ],
+    "date": "2024-01-11T08:00:00Z",
+    "category": "Entertainment"
+  },
+  {
+    "id": "e8",
+    "groupId": "1",
+    "amount": 45.80,
+    "currency": "EUR",
+    "description": "Museum Tickets",
+    "paidBy": "m3",
+    "participants": [
+      {
+        "memberId": "m1",
+        "share": 11.45,
+        "shareType": "equal"
+      },
+      {
+        "memberId": "m2",
+        "share": 11.45,
+        "shareType": "equal"
+      },
+      {
+        "memberId": "m3",
+        "share": 11.45,
+        "shareType": "equal"
+      },
+      {
+        "memberId": "m4",
+        "share": 11.45,
+        "shareType": "equal"
+      }
+    ],
+    "date": "2024-01-17T10:30:00Z",
+    "category": "Entertainment"
+  }
+]

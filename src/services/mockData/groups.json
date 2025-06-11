@@ -1,0 +1,124 @@
+[
+  {
+    "id": "1",
+    "name": "Paris Weekend Trip",
+    "currency": "EUR",
+    "createdAt": "2024-01-15T10:30:00Z",
+    "members": [
+      {
+        "id": "m1",
+        "name": "Sarah Chen",
+        "email": "sarah.chen@email.com",
+        "avatar": null
+      },
+      {
+        "id": "m2",
+        "name": "Mike Johnson",
+        "email": "mike.johnson@email.com",
+        "avatar": null
+      },
+      {
+        "id": "m3",
+        "name": "Emma Davis",
+        "email": "emma.davis@email.com",
+        "avatar": null
+      },
+      {
+        "id": "m4",
+        "name": "Alex Rodriguez",
+        "email": "alex.rodriguez@email.com",
+        "avatar": null
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "name": "Roommates Expenses",
+    "currency": "USD",
+    "createdAt": "2024-01-10T09:00:00Z",
+    "members": [
+      {
+        "id": "m5",
+        "name": "Jessica Wu",
+        "email": "jessica.wu@email.com",
+        "avatar": null
+      },
+      {
+        "id": "m6",
+        "name": "David Kim",
+        "email": "david.kim@email.com",
+        "avatar": null
+      },
+      {
+        "id": "m7",
+        "name": "Lisa Thompson",
+        "email": "lisa.thompson@email.com",
+        "avatar": null
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "name": "Office Lunch Club",
+    "currency": "USD",
+    "createdAt": "2024-01-08T14:20:00Z",
+    "members": [
+      {
+        "id": "m8",
+        "name": "Ryan Martinez",
+        "email": "ryan.martinez@company.com",
+        "avatar": null
+      },
+      {
+        "id": "m9",
+        "name": "Sophie Anderson",
+        "email": "sophie.anderson@company.com",
+        "avatar": null
+      },
+      {
+        "id": "m10",
+        "name": "Tom Wilson",
+        "email": "tom.wilson@company.com",
+        "avatar": null
+      },
+      {
+        "id": "m11",
+        "name": "Maria Garcia",
+        "email": "maria.garcia@company.com",
+        "avatar": null
+      },
+      {
+        "id": "m12",
+        "name": "James Brown",
+        "email": "james.brown@company.com",
+        "avatar": null
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "name": "Ski Trip Colorado",
+    "currency": "USD",
+    "createdAt": "2024-01-05T16:45:00Z",
+    "members": [
+      {
+        "id": "m13",
+        "name": "Olivia Taylor",
+        "email": "olivia.taylor@email.com",
+        "avatar": null
+      },
+      {
+        "id": "m14",
+        "name": "Ethan Moore",
+        "email": "ethan.moore@email.com",
+        "avatar": null
+      },
+      {
+        "id": "m15",
+        "name": "Chloe White",
+        "email": "chloe.white@email.com",
+        "avatar": null
+      }
+    ]
+  }
+]
