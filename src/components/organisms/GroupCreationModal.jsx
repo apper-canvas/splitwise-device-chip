@@ -15,18 +15,55 @@ const GroupCreationModal = ({ isOpen, onClose, onSubmit }) => {
         name: '',
         currency: 'USD',
         members: []
-    });
+});
     const [newMemberName, setNewMemberName] = useState('');
     const [newMemberEmail, setNewMemberEmail] = useState('');
+    const [newMemberPhone, setNewMemberPhone] = useState('');
+    const [phoneError, setPhoneError] = useState('');
 
-    const handleAddMember = (e) => {
+    // Phone number validation
+    const validatePhone = (phone) => {
+        const phoneRegex = /^\(\d{3}\) \d{3}-\d{4}$/;
+        return phoneRegex.test(phone);
+    };
+
+    const formatPhone = (value) => {
+        // Remove all non-digits
+        const digits = value.replace(/\D/g, '');
+        
+        // Format as (###) ###-####
+        if (digits.length >= 6) {
+            return `(${digits.slice(0, 3)}) ${digits.slice(3, 6)}-${digits.slice(6, 10)}`;
+        } else if (digits.length >= 3) {
+            return `(${digits.slice(0, 3)}) ${digits.slice(3)}`;
+        } else {
+            return digits;
+        }
+    };
+
+    const handlePhoneChange = (e) => {
+        const formatted = formatPhone(e.target.value);
+        setNewMemberPhone(formatted);
+        
+        // Clear error when user starts typing
+        if (phoneError) {
+            setPhoneError('');
+        }
+    };
+const handleAddMember = (e) => {
         e.preventDefault();
-        if (!newMemberName.trim() || !newMemberEmail.trim()) return;
+        if (!newMemberName.trim() || !newMemberEmail.trim() || !newMemberPhone.trim()) return;
 
-        const newMember = {
+        // Validate phone number
+        if (!validatePhone(newMemberPhone)) {
+            setPhoneError('Please enter a valid phone number in format (123) 456-7890');
+            return;
+        }
+const newMember = {
             id: Date.now().toString(),
             name: newMemberName.trim(),
             email: newMemberEmail.trim(),
+            phone: newMemberPhone.trim(),
             avatar: null
         };
 
@@ -34,9 +71,10 @@ const GroupCreationModal = ({ isOpen, onClose, onSubmit }) => {
             ...prev,
             members: [...prev.members, newMember]
         }));
-
-        setNewMemberName('');
+setNewMemberName('');
         setNewMemberEmail('');
+        setNewMemberPhone('');
+        setPhoneError('');
     };
 
     const handleRemoveMember = (memberId) => {
@@ -61,9 +99,11 @@ const GroupCreationModal = ({ isOpen, onClose, onSubmit }) => {
             name: '',
             currency: 'USD',
             members: []
-        });
+});
         setNewMemberName('');
         setNewMemberEmail('');
+        setNewMemberPhone('');
+        setPhoneError('');
     };
 
     return (
@@ -125,30 +165,50 @@ const GroupCreationModal = ({ isOpen, onClose, onSubmit }) => {
                                         <Text as="label" className="block text-sm font-medium text-surface-700 mb-3">
                                             Add Members <span className="text-red-500">*</span>
                                         </Text>
-                                        
-                                        <div className="flex space-x-2 mb-4">
-                                            <Input
-                                                type="text"
-                                                value={newMemberName}
-                                                onChange={(e) => setNewMemberName(e.target.value)}
-                                                placeholder="Name"
-                                                className="flex-1 px-3 py-2"
-                                            />
-                                            <Input
-                                                type="email"
-                                                value={newMemberEmail}
-                                                onChange={(e) => setNewMemberEmail(e.target.value)}
-                                                placeholder="Email"
-                                                className="flex-1 px-3 py-2"
-                                            />
-                                            <Button
-                                                type="button"
-                                                onClick={handleAddMember}
-                                                className="px-3 py-2 bg-primary text-white rounded-lg hover:bg-secondary !hover:scale-100 !active:scale-95"
-                                            >
-                                                <ApperIcon name="Plus" size={16} />
-                                            </Button>
-                                        </div>
+<div className="space-y-3 mb-4">
+                            <div className="flex space-x-2">
+                                <Input
+                                    type="text"
+                                    value={newMemberName}
+                                    onChange={(e) => setNewMemberName(e.target.value)}
+                                    placeholder="Name"
+                                    className="flex-1 px-3 py-2"
+                                    required
+                                />
+                                <Input
+                                    type="email"
+                                    value={newMemberEmail}
+                                    onChange={(e) => setNewMemberEmail(e.target.value)}
+                                    placeholder="Email"
+                                    className="flex-1 px-3 py-2"
+                                    required
+                                />
+                            </div>
+                            <div className="flex space-x-2">
+                                <div className="flex-1">
+                                    <Input
+                                        type="tel"
+                                        value={newMemberPhone}
+                                        onChange={handlePhoneChange}
+                                        placeholder="(123) 456-7890"
+                                        className={`px-3 py-2 ${phoneError ? 'border-red-500 focus:ring-red-500' : ''}`}
+                                        required
+                                        maxLength={14}
+                                    />
+                                    {phoneError && (
+                                        <Text className="text-xs text-red-500 mt-1">{phoneError}</Text>
+                                    )}
+                                </div>
+                                <Button
+                                    type="button"
+                                    onClick={handleAddMember}
+                                    disabled={!newMemberName.trim() || !newMemberEmail.trim() || !newMemberPhone.trim()}
+                                    className="px-3 py-2 bg-primary text-white rounded-lg hover:bg-secondary disabled:opacity-50 disabled:cursor-not-allowed !hover:scale-100 !active:scale-95"
+                                >
+                                    <ApperIcon name="Plus" size={16} />
+                                </Button>
+                            </div>
+                        </div>
 
                                         {/* Members List */}
                                         {formData.members.length > 0 && (
@@ -157,9 +217,12 @@ const GroupCreationModal = ({ isOpen, onClose, onSubmit }) => {
                                                     <div key={member.id} className="flex items-center justify-between p-3 bg-surface-50 rounded-lg">
                                                         <div className="flex items-center space-x-3">
                                                             <MemberAvatar name={member.name} size="md" />
-                                                            <div>
+<div>
                                                                 <Text as="p" className="font-medium text-surface-900">{member.name}</Text>
                                                                 <Text as="p" className="text-sm text-surface-500">{member.email}</Text>
+                                                                {member.phone && (
+                                                                    <Text as="p" className="text-xs text-surface-400">{member.phone}</Text>
+                                                                )}
                                                             </div>
                                                         </div>
                                                         <Button
